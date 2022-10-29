@@ -1,0 +1,30 @@
+.random_cat_container {
+  display: flex;
+  gap: 0.5rem;
+
+  img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 20%;
+  }
+
+  p {
+    font-size: 1.5em;
+    width: 17rem;
+    line-height: 1.2em;
+  }
+}
+
+.button_container {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+
+  button {
+    width: 10rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background-color: bisque;
+    color: rgb(53, 0, 0);
+  }
+}

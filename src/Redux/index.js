@@ -1,13 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-
-// Modulos
-// Modulo.slice.js
-// Modulo.thunk.js
+import { CatApi, GiphyApi } from './API';
 
 const store = configureStore({
   reducer: {
-    // Asignacion : Reducer
+    [GiphyApi.reducerPath]: GiphyApi.reducer,
+    [CatApi.reducerPath]: CatApi.reducer,
   },
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware()
+      .concat(CatApi.middleware)
+      .concat(GiphyApi.middleware),
 });
 
 export default store;
